@@ -1,10 +1,5 @@
-const { createClient } = require('@supabase/supabase-js');
-const dotenv = require('dotenv');
-
-dotenv.config(); // Load environment variables
-
-// Initialize Supabase client
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+const { supabase } = require('../clients/supabaseClient');
+const ErrorResponse = require('../utils/errorResponse');
 
 // Signup controller
 exports.signup = async (req, res) => {
@@ -12,13 +7,9 @@ exports.signup = async (req, res) => {
 
   // Basic validation
   if (!email || !password) {
-    return res.status(400).json({ message: 'Email and password are required' });
+    return ErrorResponse.badRequest('Email and password are required').send(res);
   }
-
-  if (password.length < 6) {
-    return res.status(400).json({ message: 'Password must be at least 6 characters long' });
-  }
-
+  
   try {
     // Create user with Supabase
     const { data, error } = await supabase.auth.signUp({
@@ -33,10 +24,7 @@ exports.signup = async (req, res) => {
     });
 
     if (error) {
-      return res.status(400).json({ 
-        message: 'Signup failed', 
-        error: error.message 
-      });
+      return ErrorResponse.badRequest('Signup failed', error.message).send(res);
     }
 
     // Respond with success message
@@ -46,6 +34,6 @@ exports.signup = async (req, res) => {
     });
   } catch (err) {
     console.error('Signup error:', err);
-    res.status(500).json({ message: 'Server error', error: err.message });
+    return ErrorResponse.fromException(err, 500).send(res);
   }
 };
