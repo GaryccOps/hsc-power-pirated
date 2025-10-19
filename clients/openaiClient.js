@@ -17,7 +17,8 @@ const getOpenAIClient = () => {
     }
     
     openaiInstance = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY
+      apiKey: process.env.OPENAI_API_KEY,
+      baseUrl: process.env.OPENAI_BASE_URL
     });
   }
   

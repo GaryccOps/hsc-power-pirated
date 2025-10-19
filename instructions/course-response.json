@@ -1,0 +1,39 @@
+{
+    "success": true,
+    "message": "Chat response generated successfully",
+    "data": {
+        "created_at": 1760845752,
+        "id": "pllns_e6fbffe8966a8f39966fc9b31291a2dc",
+        "model": "gpt-4.1-nano",
+        "object": "response",
+        "output": [
+            {
+                "type": "message",
+                "id": "msg_Ducf5dTcpVa4Aly9AgjMzmGfq9fvfAXdFNtDaLkcbql8bdcv",
+                "status": "completed",
+                "role": "assistant",
+                "content": [
+                    {
+                        "type": "output_text",
+                        "text": "[\n  {\n    \"Recommend course\": \"Mathematics Advanced\",\n    \"Reasoning\": \"Provides a strong foundation in mathematical concepts essential for many STEM university courses such as engineering, sciences, and economics.\"\n  },\n  {\n    \"Recommend course\": \"Physics\",\n    \"Reasoning\": \"Essential for students interested in engineering, physics, or other physical sciences, offering practical and theoretical understanding of natural laws.\"\n  },\n  {\n    \"Recommend course\": \"Chemistry\",\n    \"Reasoning\": \"Supports careers in medicine, biochemistry, environmental science, and chemical engineering by developing understanding of chemical principles.\"\n  },\n  {\n    \"Recommend course\": \"Information Processes and Technology (IPT)\",\n    \"Reasoning\": \"Prepares students for computing and information technology fields with a focus on data management and digital systems.\"\n  },\n  {\n    \"Recommend course\": \"Biology\",\n    \"Reasoning\": \"Fundamental for careers in health sciences, medicine, and biological research, fostering understanding of living systems.\"\n  }\n]"
+                    }
+                ]
+            }
+        ],
+        "status": "completed",
+        "temperature": 0.7,
+        "text": {
+            "format": {
+                "type": "text"
+            }
+        },
+        "usage": {
+            "input_tokens": 838,
+            "output_tokens": 209,
+            "total_tokens": 1047,
+            "output_tokens_details": null,
+            "input_tokens_details": {}
+        },
+        "output_text": "[\n  {\n    \"Recommend course\": \"Mathematics Advanced\",\n    \"Reasoning\": \"Provides a strong foundation in mathematical concepts essential for many STEM university courses such as engineering, sciences, and economics.\"\n  },\n  {\n    \"Recommend course\": \"Physics\",\n    \"Reasoning\": \"Essential for students interested in engineering, physics, or other physical sciences, offering practical and theoretical understanding of natural laws.\"\n  },\n  {\n    \"Recommend course\": \"Chemistry\",\n    \"Reasoning\": \"Supports careers in medicine, biochemistry, environmental science, and chemical engineering by developing understanding of chemical principles.\"\n  },\n  {\n    \"Recommend course\": \"Information Processes and Technology (IPT)\",\n    \"Reasoning\": \"Prepares students for computing and information technology fields with a focus on data management and digital systems.\"\n  },\n  {\n    \"Recommend course\": \"Biology\",\n    \"Reasoning\": \"Fundamental for careers in health sciences, medicine, and biological research, fostering understanding of living systems.\"\n  }\n]"
+    }
+}
