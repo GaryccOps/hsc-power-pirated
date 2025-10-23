@@ -1,8 +1,8 @@
-const { supabase } = require('../clients/supabaseClient');
-const ErrorResponse = require('../utils/errorResponse');
+import { supabase } from '../clients/supabaseClient.js';
+import ErrorResponse from '../utils/errorResponse.js';
 
 // Signup controller
-exports.signup = async (req, res) => {
+export const signup = async (req, res) => {
   const { email, password, firstName, lastName } = req.body;
 
   // Basic validation

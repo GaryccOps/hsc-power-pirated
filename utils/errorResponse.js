@@ -47,4 +47,4 @@ class ErrorResponse {
   }
 }
 
-module.exports = ErrorResponse;
+export default ErrorResponse;

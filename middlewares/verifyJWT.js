@@ -1,5 +1,5 @@
-const { supabase } = require('../clients/supabaseClient');
-const ErrorResponse = require('../utils/errorResponse');
+import { supabase } from '../clients/supabaseClient.js';
+import ErrorResponse from '../utils/errorResponse.js';
 
 // Middleware to verify JWT token
 const verifyJWT = async (req, res, next) => {
@@ -30,4 +30,4 @@ const verifyJWT = async (req, res, next) => {
   }
 };
 
-module.exports = verifyJWT;
+export default verifyJWT;

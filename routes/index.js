@@ -1,8 +1,12 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+import authRouter from './auth.js';
+import usersRouter from './users.js';
+import aiAgentsRouter from './aiAgents.js';
 
+const router = express.Router();
 
-router.use('/auth', require('./auth'))
-router.use('/users', require('./users'))
+router.use('/auth', authRouter);
+router.use('/users', usersRouter);
+router.use('/ai-agents', aiAgentsRouter);
 
-module.exports = router;
+export default router;

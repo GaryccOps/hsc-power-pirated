@@ -1,8 +1,8 @@
-const { supabase } = require('../clients/supabaseClient');
-const ErrorResponse = require('../utils/errorResponse');
+import { supabase } from '../clients/supabaseClient.js';
+import ErrorResponse from '../utils/errorResponse.js';
 
 // Login controller
-exports.login = async (req, res) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {

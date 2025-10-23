@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import { chat } from '../controllers/aiChat.js';
+
 const router = express.Router();
-const aiAgent = require('../controllers/aiChat');
 
 /**
  * @route   POST /ai-agents/chat
@@ -8,6 +9,6 @@ const aiAgent = require('../controllers/aiChat');
  * @access  Public (can be protected with JWT middleware if needed)
  * @body    { message: string, model?: string }
  */
-router.post('/chat', aiAgent.chat);
+router.post('/chat', chat);
 
-module.exports = router;
+export default router;

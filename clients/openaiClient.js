@@ -1,5 +1,5 @@
-const OpenAI = require('openai');
-const dotenv = require('dotenv');
+import OpenAI from 'openai';
+import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables
 
@@ -25,7 +25,5 @@ const getOpenAIClient = () => {
   return openaiInstance;
 };
 
-module.exports = {
-  getOpenAIClient,
-  openai: getOpenAIClient() // Export the instance directly for convenience
-};
+export { getOpenAIClient };
+export const openai = getOpenAIClient(); // Export the instance directly for convenience

@@ -1,5 +1,5 @@
-const { createClient } = require('@supabase/supabase-js');
-const dotenv = require('dotenv');
+import { createClient } from '@supabase/supabase-js';
+import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables
 
@@ -25,7 +25,5 @@ const getSupabaseClient = () => {
   return supabaseInstance;
 };
 
-module.exports = {
-  getSupabaseClient,
-  supabase: getSupabaseClient() // Export the instance directly for convenience
-};
+export { getSupabaseClient };
+export const supabase = getSupabaseClient(); // Export the instance directly for convenience
